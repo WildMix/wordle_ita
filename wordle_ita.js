@@ -37,51 +37,23 @@ function editHtml(level, s){
         
     }
     
+    for (var i = 1, j = 1; i < 22, j < 7; i += 5, j ++){
 
-    if (level === 1){
+        if (level === i){
 
-        document.getElementById('b1').style="visibility: hidden"
+            document.getElementById("b"+j).style="visibility: hidden"
         
-        document.getElementById('b2').style="visibility: visible"
-    }
+            document.getElementById("b"+(j+1)).style="visibility: visible"            
 
-    if (level === 6){
-
-        document.getElementById('b2').style="visibility: hidden"
-
-        document.getElementById('b3').style="visibility: visible"
-    
-    }
-    if (level === 11){
-
-        document.getElementById('b3').style="visibility: hidden"
-
-        document.getElementById('b4').style="visibility: visible"
-
-    }
-    
-    if (level === 16){
-
-        document.getElementById('b4').style="visibility: hidden"
-
-        document.getElementById('b5').style="visibility: visible"
-    
-    }
-    
-    if (level === 21){
-
-        document.getElementById('b5').style="visibility: hidden"
-
-        document.getElementById('b6').style="visibility: visible"
+        }
 
     }
 
     if (level === 26){
-
+    
         document.getElementById('b6').style="visibility: hidden"
     
     }
-
 
 
 }
@@ -105,19 +77,12 @@ function handleErrors(){
 
 function handleAction(level){
 
-    // TODO capire perché è necessario verificare qui
-
 
     let s = getString(level);
 
     if (isWord(s)){
         
         
-        if (level === 26){
-    
-            document.getElementById('b6').style="visibility: hidden"
-        
-        }
         
         if (level === 26 && s != dayWord){
 
