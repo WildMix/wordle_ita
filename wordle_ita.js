@@ -15,6 +15,7 @@ window.setInterval(function(){
 document.getElementById('div').innerHTML="Parola del giorno: " + dayWord;
 
 
+
 function editHtml(level, s){
 
 
@@ -31,9 +32,11 @@ function editHtml(level, s){
     }
 
 
-    for (var i = level + 5; i < level + 10; i++){
+    for (var i = level; i < level + 5; i++){
 
-        document.getElementById(i).style="visibility: visible"
+        // non permettere di modificare i valori nei fields
+
+        //document.getElementById(i).disabled=true;
         
     }
     
@@ -90,7 +93,7 @@ function handleAction(level){
 
         }
 
-        if (s === dayWord)
+        else if (s === dayWord)
 
             victory();
         
