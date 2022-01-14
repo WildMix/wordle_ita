@@ -1,16 +1,17 @@
 let rows_dizionario = 26879;
 let rows_parole = 2741;
-let dayWord = "mazza";
+let dayWord = "";
+getDayWord();
 
-
-window.setInterval(function(){ // Set interval for checking
-    var date = new Date(); // Create a Date object to find out what time it is
-    if(date.getHours() === 9 && date.getMinutes() === 20){ // Check the time
+/*      NON HO CAPITO COME MA SI FA COSI
+window.setInterval(function(){ 
+    var date = new Date(); 
+    if(date.getHours() === 0 && date.getMinutes() === 0){ 
         getDayWord();
-        console.log(dayWord);
+        
     }
-}, 1000); // Repeat every 60000 milliseconds (1 minute)
-
+}, 60000); 
+*/
 document.getElementById('div').innerHTML="Parola del giorno: " + dayWord;
 
 
